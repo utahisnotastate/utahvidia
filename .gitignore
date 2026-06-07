@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.so
+*.pyd
+.coverage
+htmlcov/
+.tox/
+
+# PyTorch JIT extension artifacts
+utahvidia_zeo_shield*.so
+utahvidia_zeo_shield*/
