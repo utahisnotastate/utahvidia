@@ -1,33 +1,35 @@
 # Pelaaminen ja GPU:n tulevaisuus — Utah-Vid-ia
 
-Dokumentaatio pelaajille, striimaajille ja kaikille, jotka kysyvät: **voiko ohjelmisto tarkoittaa, etten koskaan enää osta GPU:ta?**
+## Lataa ja aja (Git ei tarvita)
 
-## Aloita tästä
+| Tapa | Linkki |
+|------|--------|
+| **Windows `.exe`** | [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases) → `UtahVidia-Gaming.exe` |
+| **ZIP + `.bat`** | [Lataa ZIP](https://github.com/utahisnotastate/utahvidia/archive/refs/heads/main.zip) → `launchers/UtahVidia-Gaming.bat` |
+| **Täysi opas** | [gaming-tutorial.md](gaming-tutorial.md) |
+
+Kaikki on **ilmaista ja täysin avattu** (MIT).
+
+**Valinnaiset lahjoitukset:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
+
+## Oppaat
 
 | Opas | Parhaiten sopii |
 |-------|----------|
-| **[Pelaajan opas (aloita tästä)](gaming-tutorial.md)** | Vaiheittainen asennus, demo, vertailumittaus, avaus |
-| **[GPU Unlock Patron -ohjelma](gpu-unlock-patron.md)** | Lahjoita → avaa Pro-profiilit pysyvästi |
+| **[Pelaajan opas](gaming-tutorial.md)** | Lataa exe, aja avaus, säädä profiilit |
 | [Pelaamisen UKK](gaming-faq.md) | Yleisiä kysymyksiä |
-| [Lapsille](gaming-children.md) | Laserkaupungit ja sarjakuvakehykset |
+| [Lapsille](gaming-children.md) | Yksinkertainen GPU-tulevaisuuden selitys |
 | [Yleiskatsaus](gaming-overview.md) | Illuusio vs fysiikka |
 | [Tekninen](gaming-technical.md) | Moduulit ja API |
-| [Latency Shield](latency-shield.md) | Kehyksen rekonstruktioarkkitehtuuri |
-
-## Pikakomennot
+| [Latency Shield](latency-shield.md) | Kehyksen rekonstruktio |
 
 ```bash
-pip install -e ".[dev]"
-utahvidia gaming      # pelipinon demo
-utahvidia patron      # tarkista GPU-avaus
-utahvidia bench       # vertaa GPU:ta
+utahvidia-gaming    # if Python installed
+utahvidia gaming    # same stack via main CLI
 ```
 
-## Tue Utah-Vid-iaa (avaa Pro-profiilit)
+## Muut kielet
 
-**PayPal:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)  
-**Muistio:** `GPU-UNLOCK`
+[English](../en/gaming-index.md) · [中文](../zh/gaming-index.md) · [Eesti](../et/gaming-index.md) · [Русский](../ru/gaming-index.md) · [Suomi](../fi/gaming-index.md) · [日本語](../ja/gaming-index.md)
 
 [Takaisin dokumentaatioindeksiin](index.md)
-
-**Muut kielet:** [English](../en/gaming-index.md) · [Eesti](../et/gaming-index.md) · [Русский](../ru/gaming-index.md) · [Suomi](../fi/gaming-index.md)

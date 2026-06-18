@@ -1,215 +1,124 @@
-# 玩家教程 — 从零到 GPU 解锁
+# 玩家教程 — 免安装游戏解锁
 
-完整 walkthrough：安装 Utah-Vid-ia、运行游戏技术栈、基准测试你的 GPU，并可选通过[赞助者计划](gpu-unlock-patron.md) **解锁 Pro 配置文件**。
+**无需 Git、无需解锁文件、无需付费**即可运行完整的 Utah-Vid-ia 游戏技术栈。
 
-**时间：** 约 30 分钟 · **费用：** $0（Pro 解锁可通过捐赠可选）
-
----
-
-## 你将完成什么
-
-1. 在 Windows、Linux 或 macOS 上安装 Utah-Vid-ia  
-2. 运行 **渐近现实引擎** 游戏演示  
-3. 理解延迟护盾 + 感知上采样在 **你的** GPU 上的作用  
-4. 基准测试前后体感对比  
-5. 可选通过 PayPal 捐赠 **永久解锁 Pro 游戏配置文件**  
+**可选捐赠：** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
 ---
 
-## 前置条件
+## 最快路径：下载 `.exe`
 
-| 要求 | 说明 |
-|-------------|-------|
-| Python 3.10+ | `py --version` 或 `python3 --version` |
-| pip | 包安装器 |
-| Git | 从 GitHub 克隆 |
-| GPU（可选） | NVIDIA CUDA 最佳；AMD/Intel 经 PyTorch；CPU = 演示模式 |
+1. 前往 [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases)
+2. 下载 **`UtahVidia-Gaming.exe`**
+3. 双击运行
+
+你将看到：
+
+```
+UTAH-VIDIA GAMING UNLOCK
+Full stack enabled — no install, no unlock file needed
+[1/4] Boot gaming enclave...
+[2/4] Latency shield frame reconstruction...
+[3/4] Perceptual upscale + speculative intent...
+[4/4] Fractal + holographic paths...
+GAMING UNLOCK COMPLETE — all profiles active
+```
+
+按 Enter 关闭（运行打包 exe 时）。
+
+还没有 Release？使用下方选项 2 或 3，或请维护者运行 [Build workflow](https://github.com/utahisnotastate/utahvidia/actions)。
 
 ---
 
-## 第 1 步 — 克隆与安装
+## 选项 2 — ZIP + `.bat`（需要 Python，无需 Git）
+
+1. 下载 [Source ZIP](https://github.com/utahisnotastate/utahvidia/archive/refs/heads/main.zip)
+2. 解压到任意位置（例如 `Desktop\utahvidia-main`）
+3. 双击 **`launchers\UtahVidia-Gaming.bat`**
+
+从文件夹安装并运行完整解锁。
+
+---
+
+## 选项 3 — Python 一行命令
+
+若已安装 Python 3.10+：
 
 ```bash
-git clone https://github.com/utahisnotastate/utahvidia.git
-cd utahvidia
-pip install -e ".[dev]"
-```
-
-Windows PowerShell：
-
-```powershell
-git clone https://github.com/utahisnotastate/utahvidia.git
-cd utahvidia
-py -m pip install -e ".[dev]"
-```
-
-验证：
-
-```bash
-utahvidia --help
-# or: py -m utahvidia.cli
+pip install git+https://github.com/utahisnotastate/utahvidia.git
+utahvidia-gaming
 ```
 
 ---
 
-## 第 2 步 — 运行第一个游戏演示
+## 解锁内容（全部免费）
 
-```bash
-utahvidia gaming
-```
+| 功能 | 作用 |
+|------|------|
+| Latency shield | 通过运动感知重建实现更流畅的帧 |
+| Profile `max` | 最佳默认调优（自动应用） |
+| Perceptual upscale | 低分辨率基线到高分辨率演示路径 |
+| Speculative intent | 根据预测输入运动预渲染 |
+| Osmotic VRAM | 大型虚拟内存区域（模拟） |
+| Photonic / fractal / holographic | 完整 Reality Engine 演示 |
 
-预期输出（节选）：
-
-```
-UTAH-VIDIA // Universal Compute Bridge v0.3.0
-microvisor: [MICROVISOR SIM] ...
-Latency shield: (180, 320, 4) in X.XX ms
-Perceptual upscale: (360, 640, 3)
-Speculative frame: (180, 320, 4)
-```
-
-**发生了什么：**
-
-- **延迟护盾** 用运动向量混合当前帧与历史帧（运动更顺滑）。  
-- **感知上采样** 从低分辨率基线加倍分辨率（AI 风格路径演示）。  
-- **推测意图** 根据类鼠标增量预渲染幻影帧。  
+可用配置文件：`competitive`、`cinematic`、`vr`、`max`、`vram`、`legend`
 
 ---
 
-## 第 3 步 — 完整技术栈导览
+## 分步：调优 GPU（可选）
 
-```bash
-utahvidia all
-```
-
-运行 ghost kernel、编译器、渗透路由器、光子模拟、ZEO-Shield、编排器，**以及** 游戏技术栈。
-
----
-
-## 第 4 步 — 基准测试你的 GPU
-
-```bash
-utahvidia bench
-```
-
-保存输出 —— 对 GitHub Issue 和对比赞助者配置文件很有用。
-
-带 NVCC 的 CUDA 系统上，原生内核可能在首次运行时 JIT 编译（多等几秒，仅一次）。
-
----
-
-## 第 5 步 — Python：在本机调优帧
-
-创建 `my_gaming_test.py`：
+运行解锁一次后，创建 `my_game.py`：
 
 ```python
-import torch
 from utahvidia import UtahRealityEngine
+from utahvidia.gaming_profiles import apply_gaming_profile
 from utahvidia.latency_shield import DisplayHookConfig
+import torch
 
-# Match your monitor or game resolution
 W, H = 1920, 1080
 engine = UtahRealityEngine(display_hook=DisplayHookConfig(width=W, height=H))
+apply_gaming_profile(engine, "competitive")  # or cinematic, max, legend
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Device: {device}")
-print(engine.bootstrap_gaming_enclave())
-
 current = torch.rand(H, W, 4, device=device)
 history = torch.rand(H, W, 4, device=device)
 motion = torch.randn(H, W, 2, device=device) * 0.3
 
 frame = engine.reconstruct_frame(current, history, motion)
-upscaled = engine.perceptual_upscale_path(current[..., :3])
-
-print("Frame:", frame.shape, "Upscaled:", upscaled.shape)
-```
-
-运行：
-
-```bash
-python my_gaming_test.py
+print("OK", frame.shape)
 ```
 
 ---
 
-## 第 6 步 — 竞技 vs 电影配置文件（免费默认）
-
-```python
-from utahvidia.patron import apply_gaming_profile, list_profiles
-
-print(list_profiles())  # competitive, cinematic, vr, patron_* if unlocked
-
-engine = UtahRealityEngine()
-apply_gaming_profile(engine, "competitive")  # lower alpha = snappier
-# apply_gaming_profile(engine, "cinematic")  # smoother interpolation
-```
-
-| 配置文件 | 适合 | 延迟护盾 alpha |
-|---------|----------|----------------------|
-| `competitive` | 电竞、快鼠标 | 0.75（更灵敏） |
-| `cinematic` | 单机、剧情 | 0.55（更顺滑） |
-| `vr` | 头显 | 0.60 + 缩短推测视野 |
-
-解锁后赞助者专属：`patron_max`、`patron_vram`、`patron_legend`。
-
----
-
-## 第 7 步 — 解锁 Pro 游戏配置文件
-
-1. 通过 PayPal 捐赠：[utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)  
-2. 备注/附言：**`GPU-UNLOCK`**  
-3. 创建赞助者文件或设置环境变量 —— [完整说明](gpu-unlock-patron.md#激活你的解锁)  
-4. 验证：
-
-```bash
-utahvidia patron
-```
-
-5. 应用 max 配置文件：
-
-```python
-from utahvidia import UtahRealityEngine
-from utahvidia.patron import apply_gaming_profile, patron_status
-
-print(patron_status())
-engine = UtahRealityEngine()
-apply_gaming_profile(engine, "patron_max")
-```
-
-**你已在该机器上永久解锁 Pro 预设**（文件或环境变量重启后仍有效）。
-
----
-
-## 第 8 步 — 故障排除
+## 故障排除
 
 | 问题 | 解决办法 |
-|---------|-----|
-| 找不到 `python`（Windows） | 改用 `py` |
-| 未检测到 CUDA | 安装 [PyTorch + CUDA](https://pytorch.org)；CPU 模式仍可用 |
-| 原生内核编译失败 | 使用 PyTorch 路径；API 中设 `use_native=False` |
-| 赞助者未激活 | 检查 `~/.utahvidia/patron.unlock` 或 `UTAHVIDIA_PATRON=1` |
-| 其他游戏 FPS 无变化 | Utah-Vid-ia 是中间件 —— 先通过教程脚本集成；完整游戏钩子在路线图中 |
+|------|----------|
+| Releases 页没有 `.exe` | 使用 `.bat` 或 `utahvidia-gaming`；维护者可触发 Actions workflow |
+| 找不到 Python | 从 [python.org](https://python.org) 安装，或使用 `.exe` |
+| exe 被 Windows 拦截 | 点击「更多信息」→「仍要运行」（未签名的开源构建） |
+| 下载体积大 | exe 捆绑 PyTorch（约 200MB+）— 使用 `.bat` 路径下载更小 |
+| AAA 游戏 FPS 无变化 | Utah-Vid-ia 是中间件 — 通过脚本集成；直接游戏钩子在路线图中 |
 
 ---
 
-## 第 9 步 — 分享与支持
+## 支持项目（可选）
 
-- 为仓库点 Star：[github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
-- 告诉朋友：捐赠 **GPU-UNLOCK** → Pro 配置文件  
-- 主播：在简介中链接 [gpu-unlock-patron.md](gpu-unlock-patron.md)  
+永久免费。捐赠有助于硬件测试和翻译：
+
+**PayPal：** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
 ---
 
 ## 延伸阅读
 
-- [GPU 解锁赞助者计划](gpu-unlock-patron.md)  
-- [游戏 FAQ](gaming-faq.md)  
-- [延迟护盾深入](latency-shield.md)  
-- [儿童版 —— 为什么 GPU 重要](gaming-children.md)  
+- [游戏中心](gaming-index.md)
+- [游戏 FAQ](gaming-faq.md)
+- [下载指南](../../launchers/README.md)
 
 ## 其他语言
 
-[English](../en/gaming-tutorial.md) · [日本語](../ja/gaming-tutorial.md)
+[English](../en/gaming-tutorial.md) · [Eesti](../et/gaming-tutorial.md) · [Русский](../ru/gaming-tutorial.md) · [Suomi](../fi/gaming-tutorial.md) · [日本語](../ja/gaming-tutorial.md)
 
-[返回游戏中心](gaming-index.md)
+[返回文档索引](index.md)

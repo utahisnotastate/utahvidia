@@ -1,29 +1,36 @@
 # Utah-Vid-ia dokumentatsioon (eesti keel)
 
-**Universal Compute Bridge** — vahevara, mis muudab GPU-tarkvara vähem sõltuvaks ühe tootja draiveritest ja kompilaatoritest.
+## Mängijatele — Git pole vaja
+
+| Allalaadimine | Link |
+|---------------|------|
+| **Windows exe** | [Releases](https://github.com/utahisnotastate/utahvidia/releases) |
+| **Õpetus** | [gaming-tutorial.md](gaming-tutorial.md) |
 
 ## Kes sa oled?
 
 | Juhend | Sobib kõige paremini |
 |--------|------------------------|
-| [Lastele](children.md) | 8+ aastased, uudishimulikud õppijad, lapsevanemad |
-| [Mitte-tehniline ülevaade](non-technical.md) | Juhid, investorid, tooteomanikud |
-| [Tehniline viide](technical.md) | Süsteemiinsenerid, ML-platvormi meeskonnad |
-| [CTO-dele](cto.md) | Strateegia, eelarve, risk, tarnija otsused |
-| [CUDA programmeerijatele](cuda-programmers.md) | Arendajad, kes migreeruvad CUDA/nvcc-st |
-| [Migratsioonijuhend](migration-guide.md) | Samm-sammult kasutuselevõtt olemasolevatest virnadest |
-| [Mängud ja GPU tulevik](gaming-index.md) | Õpetused, latency shield, **GPU Unlock Patron** |
-| [Mängija õpetus](gaming-tutorial.md) | Täielik juhend mängijatele ja striimijatele |
-| [GPU Unlock Patron](gpu-unlock-patron.md) | Anneta → Pro profiilid igaveseks |
-| [Mängude KKK](gaming-faq.md) | Patron, turvalisus, ühilduvus |
-| [Anneta](donate.md) | PayPal utah@utahcreates.com |
+| [Mängija õpetus](gaming-tutorial.md) | Laadi exe, täielik mängude avamine |
+| [Mängude keskus](gaming-index.md) | Kõik mängudokumentatsioon |
+| [Lastele](children.md) | 8+ aastased, uudishimulikud õppijad |
+| [Mitte-tehniline ülevaade](non-technical.md) | Juhid, investorid |
+| [Tehniline viide](technical.md) | Insenerid, ML-platvormi meeskonnad |
+| [CTO-dele](cto.md) | Strateegia, eelarve, risk |
+| [CUDA programmeerijatele](cuda-programmers.md) | CUDA migratsioon |
+| [Migratsioonijuhend](migration-guide.md) | Samm-sammult kasutuselevõtt |
+| [Anneta (valikuline)](donate.md) | PayPal tugi |
 
 ## Kiirlingid
 
 - Hoidla: [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)
-- Arhitektuuridiagrammid: [../ARCHITECTURE.md](../ARCHITECTURE.md)
-- Paigaldus: `pip install -e ".[dev]"` seejärel `utahvidia`
+- Laadi käivitajad: [launchers/README.md](../../launchers/README.md)
+- Paigaldus: `pip install -e ".[dev]"` seejärel `utahvidia-gaming`
 
 ## Teised keeled
 
 [English](../en/) · [中文](../zh/) · [Eesti](../et/) · [Русский](../ru/) · [Suomi](../fi/) · [日本語](../ja/)
+
+## Tugi (valikuline)
+
+[Anneta PayPal kaudu — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)

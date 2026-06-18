@@ -1,33 +1,36 @@
 # Utah-Vid-ia Documentation (English)
 
-**Universal Compute Bridge** — middleware that makes GPU software less dependent on one vendor’s drivers and compilers.
+## Gamers — no Git required
+
+| Download | Link |
+|----------|------|
+| **Windows exe** | [Releases](https://github.com/utahisnotastate/utahvidia/releases) |
+| **Tutorial** | [gaming-tutorial.md](gaming-tutorial.md) |
 
 ## Who are you?
 
 | Guide | Best for |
 |-------|----------|
-| [For children](children.md) | Ages 8+, curious learners, parents |
-| [Non-technical overview](non-technical.md) | Managers, investors, product owners |
-| [Technical reference](technical.md) | Systems engineers, ML platform teams |
-| [For CTOs](cto.md) | Strategy, budget, risk, vendor decisions |
-| [For CUDA programmers](cuda-programmers.md) | Developers migrating from CUDA/nvcc |
-| [Migration guide](migration-guide.md) | Step-by-step adoption from existing stacks |
-| [Gaming & GPU future](gaming-index.md) | Tutorials, latency shield, **GPU Unlock Patron** |
-| [Gamer tutorial](gaming-tutorial.md) | Full walkthrough for players & streamers |
-| [GPU Unlock Patron](gpu-unlock-patron.md) | Donate → Pro profiles forever |
-| [Gaming FAQ](gaming-faq.md) | Patron, safety, compatibility |
-| [Donate](donate.md) | PayPal utah@utahcreates.com |
+| [Gamer tutorial](gaming-tutorial.md) | Download exe, full gaming unlock |
+| [Gaming hub](gaming-index.md) | All gaming docs |
+| [For children](children.md) | Ages 8+, curious learners |
+| [Non-technical overview](non-technical.md) | Managers, investors |
+| [Technical reference](technical.md) | Engineers, ML platform teams |
+| [For CTOs](cto.md) | Strategy, budget, risk |
+| [For CUDA programmers](cuda-programmers.md) | CUDA migration |
+| [Migration guide](migration-guide.md) | Phased adoption |
+| [Donate (optional)](donate.md) | PayPal support |
 
 ## Quick links
 
 - Repository: [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)
-- Architecture diagrams: [../ARCHITECTURE.md](../ARCHITECTURE.md)
-- Install: `pip install -e ".[dev]"` then `utahvidia`
+- Download launchers: [launchers/README.md](../../launchers/README.md)
+- Install: `pip install -e ".[dev]"` then `utahvidia-gaming`
 
 ## Other languages
 
 [English](../en/) · [中文](../zh/) · [Eesti](../et/) · [Русский](../ru/) · [Suomi](../fi/) · [日本語](../ja/)
 
-## Support
+## Support (optional)
 
 [Donate via PayPal — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)

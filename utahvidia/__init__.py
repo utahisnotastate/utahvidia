@@ -11,9 +11,9 @@ from utahvidia.osmotic import UtahOsmoticRouter
 from utahvidia.orchestrator import UtahSiliconOrchestrator
 from utahvidia.reality_engine import UtahRealityEngine
 from utahvidia.latency_shield import LatencyShieldIntercept, reconstruct_frames
+from utahvidia.gaming_profiles import apply_gaming_profile, list_profiles
+from utahvidia.gaming_launcher import run_gaming_unlock
 from utahvidia.zeo_shield import NeuralStatePrefetcher, ZeoShieldEngine, zeo_prefetched_matmul
-
-from utahvidia.patron import apply_gaming_profile, is_patron_unlocked, patron_status
 
 __all__ = [
     "GhostKernelLayer",
@@ -30,7 +30,7 @@ __all__ = [
     "LatencyShieldIntercept",
     "reconstruct_frames",
     "apply_gaming_profile",
-    "is_patron_unlocked",
-    "patron_status",
+    "list_profiles",
+    "run_gaming_unlock",
 ]
-__version__ = "0.3.1"
+__version__ = "0.4.0"

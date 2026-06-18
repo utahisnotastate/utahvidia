@@ -1,47 +1,37 @@
 # Tue Utah-Vid-iaa
 
-Utah-Vid-ia on avoimen lähdekoodin (MIT). Lahjoitukset rahoittavat vertailumittauksia, käännöksiä, CUDA-kernel-työtä ja **Pro Gaming Profiles** -profiileja patronille.
+Utah-Vid-ia on **ilmainen ja avoimen lähdekoodin (MIT)**. Kaikki peliominaisuudet ovat avattu — maksua ei vaadita.
 
-## PayPal
+## PayPal (valinnainen)
 
 **Sähköposti:** `utah@utahcreates.com`
 
-**Lahjoituslinkki:** [paypal.com/donate — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
+**Lahjoita:** [paypal.com/donate](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
----
+Lahjoitukset rahoittavat GPU-vertailumittauksia, käännöksiä, CUDA-kernel-työtä ja Windows exe -buildit.
 
-## Pelaajille — avaa GPU pysyvästi
+## Pelaajille
 
-Lahjoita PayPal-muistiolla **`GPU-UNLOCK`**, ottaaksesi **Pro Gaming Profiles** -profiilit käyttöön koneellasi ikuisesti (paikallinen avaustiedosto — ei tilausta).
+Lataa ilmainen peliavaus — lahjoitusta ei tarvita:
 
-| Taso | Ehdotus | Edut |
-|------|---------|------|
-| Supporter | 5 $+ | Pro-profiilit + patron CLI |
-| Enthusiast | 15 $+ | + valinnainen [PATRONS.md](../../PATRONS.md) -maininta |
-| Legend | 50 $+ | + varhaiset `@patron`-julkaisutagit |
-
-**Täysi opas:** [GPU Unlock Patron -ohjelma](gpu-unlock-patron.md) · [Pelaajan opas](gaming-tutorial.md)
-
-```bash
-utahvidia patron   # check unlock status
-```
-
----
+- [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases) → `UtahVidia-Gaming.exe`
+- [Pelaajan opas](gaming-tutorial.md)
 
 ## Mitä lahjoitukset mahdollistavat
 
 - Monitoimittaja-GPU-vertailulaitteistot  
-- CI CUDA-työkaluketjuilla  
-- Käännetty dokumentaatio (EN, 中文, ET, RU, FI, JA)  
-- Fotoniikkasillan prototyyppilaitteisto  
-- Patron-esiasetusten viritys yhteisön vertailumittauksista  
-
----
+- `UtahVidia-Gaming.exe` CI-buildit  
+- Käännetty dokumentaatio  
+- Fotoniikkasillan prototyypit  
 
 ## Muut tavat auttaa
 
 - Tähti repolle: [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
-- Jaa [pelaajan opas](gaming-tutorial.md) yhteisöllesi  
-- Pull requestit tervetulleita (kernelit, dokumentaatio, esiasetukset)  
+- Jaa [latausopas](../../launchers/README.md)  
+- Pull requestit tervetulleita  
+
+## Muut kielet
+
+[English](../en/donate.md) · [中文](../zh/donate.md) · [Eesti](../et/donate.md) · [Русский](../ru/donate.md) · [Suomi](../fi/donate.md) · [日本語](../ja/donate.md)
 
 [Takaisin dokumentaatioindeksiin](index.md)

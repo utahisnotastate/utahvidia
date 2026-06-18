@@ -1,215 +1,124 @@
-# ゲーマー向けチュートリアル — ゼロから GPU アンロックまで
+# ゲーマー向けチュートリアル — インストール不要のゲーミングアンロック
 
-完全ウォークスルー: Utah-Vid-ia のインストール、ゲーミングスタックの実行、GPU のベンチマーク、そして任意で[パトロン・プログラム](gpu-unlock-patron.md)経由の **Pro プロファイルアンロック**。
+Git 不要、アンロックファイル不要、**支払い不要**で **Utah-Vid-ia ゲーミングスタック全体**を実行できます。
 
-**所要時間:** 約 30 分 · **費用:** $0（Pro アンロックは寄付で任意）
-
----
-
-## 達成すること
-
-1. Windows、Linux、macOS に Utah-Vid-ia をインストール  
-2. **漸近リアリティエンジン** ゲームデモを実行  
-3. **あなたの** GPU 上でのレイテンシーシールド + 知覚アップスケールを理解  
-4. 前後の体感をベンチマーク  
-5. 任意で PayPal 寄付により **Pro ゲーミングプロファイルを永久アンロック**  
+**任意の寄付:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
 ---
 
-## 前提条件
+## 最速ルート: `.exe` をダウンロード
 
-| 要件 | メモ |
-|-------------|-------|
-| Python 3.10+ | `py --version` または `python3 --version` |
-| pip | パッケージインストーラ |
-| Git | GitHub からクローン |
-| GPU（任意） | NVIDIA CUDA が最良; AMD/Intel は PyTorch 経由; CPU = デモモード |
+1. [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases) にアクセス
+2. **`UtahVidia-Gaming.exe`** をダウンロード
+3. ダブルクリック
+
+次の表示が出ます:
+
+```
+UTAH-VIDIA GAMING UNLOCK
+Full stack enabled — no install, no unlock file needed
+[1/4] Boot gaming enclave...
+[2/4] Latency shield frame reconstruction...
+[3/4] Perceptual upscale + speculative intent...
+[4/4] Fractal + holographic paths...
+GAMING UNLOCK COMPLETE — all profiles active
+```
+
+Enter で閉じます（パッケージ exe 実行時）。
+
+まだ Release がない？下のオプション 2 または 3 を使うか、メンテナーに [Build workflow](https://github.com/utahisnotastate/utahvidia/actions) の実行を依頼してください。
 
 ---
 
-## ステップ 1 — クローンとインストール
+## オプション 2 — ZIP + `.bat`（Python 必要、Git 不要）
+
+1. [Source ZIP](https://github.com/utahisnotastate/utahvidia/archive/refs/heads/main.zip) をダウンロード
+2. 任意の場所に展開（例: `Desktop\utahvidia-main`）
+3. **`launchers\UtahVidia-Gaming.bat`** をダブルクリック
+
+フォルダからインストールしてフルアンロックを実行します。
+
+---
+
+## オプション 3 — Python ワンライナー
+
+Python 3.10+ がある場合:
 
 ```bash
-git clone https://github.com/utahisnotastate/utahvidia.git
-cd utahvidia
-pip install -e ".[dev]"
-```
-
-Windows PowerShell:
-
-```powershell
-git clone https://github.com/utahisnotastate/utahvidia.git
-cd utahvidia
-py -m pip install -e ".[dev]"
-```
-
-確認:
-
-```bash
-utahvidia --help
-# or: py -m utahvidia.cli
+pip install git+https://github.com/utahisnotastate/utahvidia.git
+utahvidia-gaming
 ```
 
 ---
 
-## ステップ 2 — 最初のゲームデモを実行
+## アンロック内容（すべて無料）
 
-```bash
-utahvidia gaming
-```
+| 機能 | 説明 |
+|------|------|
+| Latency shield | モーション認識再構成でより滑らかなフレーム |
+| Profile `max` | 最適なデフォルトチューニング（自動適用） |
+| Perceptual upscale | 低解像度ベースラインから高解像度デモパス |
+| Speculative intent | 予測入力モーションからの事前レンダリング |
+| Osmotic VRAM | 大規模仮想メモリアリーナ（シミュレーション） |
+| Photonic / fractal / holographic | フル Reality Engine デモ |
 
-想定出力（抜粋）:
-
-```
-UTAH-VIDIA // Universal Compute Bridge v0.3.0
-microvisor: [MICROVISOR SIM] ...
-Latency shield: (180, 320, 4) in X.XX ms
-Perceptual upscale: (360, 640, 3)
-Speculative frame: (180, 320, 4)
-```
-
-**何が起きたか:**
-
-- **レイテンシーシールド** がモーションベクトルで現在フレームと履歴をブレンド（より滑らかな動き）。  
-- **知覚アップスケール** が低解像度ベースラインから解像度を 2 倍（AI スタイル経路デモ）。  
-- **推測インテント** がマウス風デルタからファントムフレームを事前レンダリング。  
+利用可能なプロファイル: `competitive`, `cinematic`, `vr`, `max`, `vram`, `legend`
 
 ---
 
-## ステップ 3 — フルスタックツアー
+## ステップバイステップ: GPU を調整（任意）
 
-```bash
-utahvidia all
-```
-
-ghost kernel、コンパイラ、オスモティックルーター、フォトニックシム、ZEO-Shield、オーケストレータ、**および** ゲーミングスタックを実行。
-
----
-
-## ステップ 4 — GPU をベンチマーク
-
-```bash
-utahvidia bench
-```
-
-出力を保存 —— GitHub issue やパトロンプロファイル比較に有用。
-
-NVCC 付き CUDA システムでは、ネイティブカーネルが初回実行時に JIT コンパイルされる場合あり（一度だけ数秒追加）。
-
----
-
-## ステップ 5 — Python: マシン上でフレームを調整
-
-`my_gaming_test.py` を作成:
+アンロックを一度実行した後、`my_game.py` を作成:
 
 ```python
-import torch
 from utahvidia import UtahRealityEngine
+from utahvidia.gaming_profiles import apply_gaming_profile
 from utahvidia.latency_shield import DisplayHookConfig
+import torch
 
-# Match your monitor or game resolution
 W, H = 1920, 1080
 engine = UtahRealityEngine(display_hook=DisplayHookConfig(width=W, height=H))
+apply_gaming_profile(engine, "competitive")  # or cinematic, max, legend
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Device: {device}")
-print(engine.bootstrap_gaming_enclave())
-
 current = torch.rand(H, W, 4, device=device)
 history = torch.rand(H, W, 4, device=device)
 motion = torch.randn(H, W, 2, device=device) * 0.3
 
 frame = engine.reconstruct_frame(current, history, motion)
-upscaled = engine.perceptual_upscale_path(current[..., :3])
-
-print("Frame:", frame.shape, "Upscaled:", upscaled.shape)
-```
-
-実行:
-
-```bash
-python my_gaming_test.py
+print("OK", frame.shape)
 ```
 
 ---
 
-## ステップ 6 — 競技 vs シネマティックプロファイル（無料デフォルト）
-
-```python
-from utahvidia.patron import apply_gaming_profile, list_profiles
-
-print(list_profiles())  # competitive, cinematic, vr, patron_* if unlocked
-
-engine = UtahRealityEngine()
-apply_gaming_profile(engine, "competitive")  # lower alpha = snappier
-# apply_gaming_profile(engine, "cinematic")  # smoother interpolation
-```
-
-| プロファイル | おすすめ | レイテンシーシールド alpha |
-|---------|----------|----------------------|
-| `competitive` | eスポーツ、速いマウス | 0.75（よりキビキビ） |
-| `cinematic` | シングルプレイ、ストーリー | 0.55（より滑らか） |
-| `vr` | ヘッドセット | 0.60 + 推測ホライズン短縮 |
-
-アンロック後のパトロン専用: `patron_max`、`patron_vram`、`patron_legend`。
-
----
-
-## ステップ 7 — Pro ゲーミングプロファイルをアンロック
-
-1. PayPal で寄付: [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)  
-2. メモ/備考: **`GPU-UNLOCK`**  
-3. パトロンファイル作成または環境変数設定 —— [完全手順](gpu-unlock-patron.md#アンロックを有効化する)  
-4. 確認:
-
-```bash
-utahvidia patron
-```
-
-5. max プロファイルを適用:
-
-```python
-from utahvidia import UtahRealityEngine
-from utahvidia.patron import apply_gaming_profile, patron_status
-
-print(patron_status())
-engine = UtahRealityEngine()
-apply_gaming_profile(engine, "patron_max")
-```
-
-**このマシンで Pro プリセットを永久アンロックしました**（ファイルまたは環境変数は再起動後も保持）。
-
----
-
-## ステップ 8 — トラブルシューティング
+## トラブルシューティング
 
 | 問題 | 対処 |
-|---------|-----|
-| `python` が見つからない（Windows） | `py` を使う |
-| CUDA が検出されない | [PyTorch + CUDA](https://pytorch.org) をインストール; CPU モードも動作 |
-| ネイティブカーネルコンパイル失敗 | PyTorch 経路を使用; API で `use_native=False` |
-| パトロンが有効でない | `~/.utahvidia/patron.unlock` または `UTAHVIDIA_PATRON=1` を確認 |
-| 他ゲームで FPS 変化なし | Utah-Vid-ia はミドルウェア —— まずチュートリアルスクリプトで統合; フルゲームフックはロードマップ |
+|------|------|
+| Releases に `.exe` がない | `.bat` または `utahvidia-gaming` を使用; メンテナーが Actions workflow を起動可能 |
+| Python が見つからない | [python.org](https://python.org) からインストール、または `.exe` を使用 |
+| exe が Windows にブロックされる | 「詳細情報」→「実行する」（未署名の OSS ビルド） |
+| ダウンロードが大きい | exe は PyTorch を同梱（~200MB+）— 小さいダウンロードには `.bat` パス |
+| AAA ゲームで FPS 変化なし | Utah-Vid-ia はミドルウェア — スクリプトで統合; 直接ゲームフックはロードマップ |
 
 ---
 
-## ステップ 9 — 共有と支援
+## プロジェクトを支援（任意）
 
-- リポジトリにスター: [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
-- 友達に伝える: **GPU-UNLOCK** 寄付 → Pro プロファイル  
-- 配信者: プロフィールに [gpu-unlock-patron.md](gpu-unlock-patron.md) をリンク  
+永久無料。寄付はハードウェアテストと翻訳に役立ちます:
+
+**PayPal:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
 ---
 
 ## 次に読む
 
-- [GPU アンロック パトロン・プログラム](gpu-unlock-patron.md)  
-- [ゲーム FAQ](gaming-faq.md)  
-- [レイテンシーシールド詳細](latency-shield.md)  
-- [子ども向け —— GPU がなぜ重要か](gaming-children.md)  
+- [ゲームハブ](gaming-index.md)
+- [ゲーム FAQ](gaming-faq.md)
+- [ダウンロードガイド](../../launchers/README.md)
 
 ## 他の言語
 
-[English](../en/gaming-tutorial.md) · [中文](../zh/gaming-tutorial.md)
+[English](../en/gaming-tutorial.md) · [中文](../zh/gaming-tutorial.md) · [Eesti](../et/gaming-tutorial.md) · [Русский](../ru/gaming-tutorial.md) · [Suomi](../fi/gaming-tutorial.md)
 
-[ゲームハブに戻る](gaming-index.md)
+[ドキュメント索引に戻る](index.md)

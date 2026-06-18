@@ -1,47 +1,33 @@
 # Support Utah-Vid-ia
 
-Utah-Vid-ia is open source (MIT). Donations fund benchmarks, translations, CUDA kernel work, and **Pro Gaming Profiles** for patrons.
+Utah-Vid-ia is **free and open source (MIT)**. All gaming features are unlocked — no payment required.
 
-## PayPal
+## PayPal (optional)
 
 **Email:** `utah@utahcreates.com`
 
-**Donate:** [paypal.com/donate — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
+**Donate:** [paypal.com/donate](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
----
+Donations fund GPU benchmarks, translations, CUDA kernel work, and Windows exe builds.
 
-## Gamers — permanently unlock your GPU
+## Gamers
 
-Donate with PayPal memo **`GPU-UNLOCK`** to enable **Pro Gaming Profiles** on your machine forever (local unlock file — no subscription).
+Download the free gaming unlock — no donation needed:
 
-| Tier | Suggested | Benefits |
-|------|-----------|----------|
-| Supporter | $5+ | Pro profiles + patron CLI |
-| Enthusiast | $15+ | + optional [PATRONS.md](../../PATRONS.md) credit |
-| Legend | $50+ | + early `@patron` release tags |
-
-**Full guide:** [GPU Unlock Patron Program](gpu-unlock-patron.md) · [Gamer tutorial](gaming-tutorial.md)
-
-```bash
-utahvidia patron   # check unlock status
-```
-
----
+- [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases) → `UtahVidia-Gaming.exe`
+- [Gamer tutorial](gaming-tutorial.md)
 
 ## What donations enable
 
-- Multi-vendor GPU benchmark rigs  
-- CI with CUDA toolchains  
-- Translated docs (EN, 中文, ET, RU, FI, JA)  
-- Photonic bridge hardware prototypes  
-- Patron preset tuning from community benchmarks  
-
----
+- Multi-vendor benchmark rigs  
+- CI builds of `UtahVidia-Gaming.exe`  
+- Translated documentation  
+- Photonic bridge prototypes  
 
 ## Other ways to help
 
 - Star [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
-- Share the [gamer tutorial](gaming-tutorial.md) with your community  
-- Pull requests welcome (kernels, docs, presets)  
+- Share the [download guide](../../launchers/README.md)  
+- Pull requests welcome  
 
 [Back to documentation index](index.md)

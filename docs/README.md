@@ -1,28 +1,30 @@
 # Utah-Vid-ia Documentation
 
-Choose your language. Each folder is a complete, standalone set — **one language per page**.
+Choose your language. Each folder is standalone — **one language per page**.
 
 | Language | Folder |
 |----------|--------|
 | English | [en/](en/) |
-| 中文 (Chinese) | [zh/](zh/) |
-| Eesti (Estonian) | [et/](et/) |
-| Русский (Russian) | [ru/](ru/) |
-| Suomi (Finnish) | [fi/](fi/) |
-| 日本語 (Japanese) | [ja/](ja/) |
+| 中文 | [zh/](zh/) |
+| Eesti | [et/](et/) |
+| Русский | [ru/](ru/) |
+| Suomi | [fi/](fi/) |
+| 日本語 | [ja/](ja/) |
 
-## Gamers — start here
+## Gamers — no Git required
 
-| English | What |
-|---------|------|
-| [Gamer tutorial](en/gaming-tutorial.md) | Install, demo, unlock Pro profiles |
-| [GPU Unlock Patron](en/gpu-unlock-patron.md) | Donate → permanently unlock presets |
-| [Gaming FAQ](en/gaming-faq.md) | Common questions |
+Download **`UtahVidia-Gaming.exe`**: [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases)
 
-**PayPal:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com) · memo **`GPU-UNLOCK`**
+| English | |
+|---------|---|
+| [Gamer tutorial](en/gaming-tutorial.md) | Download & run full unlock |
+| [Gaming hub](en/gaming-index.md) | All gaming docs |
+| [Download guide](../launchers/README.md) | exe, bat, pip options |
 
-Localized gamer hubs: [zh](zh/gaming-index.md) · [et](et/gaming-index.md) · [ru](ru/gaming-index.md) · [fi](fi/gaming-index.md) · [ja](ja/gaming-index.md)
+**Free (MIT).** Optional donations: [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
+
+Localized gaming hubs: [zh](zh/gaming-index.md) · [et](et/gaming-index.md) · [ru](ru/gaming-index.md) · [fi](fi/gaming-index.md) · [ja](ja/gaming-index.md)
 
 ## Architecture
 
-Technical Mermaid diagrams (English): [ARCHITECTURE.md](ARCHITECTURE.md)
+[ARCHITECTURE.md](ARCHITECTURE.md)

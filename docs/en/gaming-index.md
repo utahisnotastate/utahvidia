@@ -1,31 +1,31 @@
 # Gaming & GPU Future — Utah-Vid-ia
 
-Documentation for gamers, streamers, and anyone asking: **can software mean I never buy a GPU again?**
+## Download and run (no Git)
 
-## Start here
+| Method | Link |
+|--------|------|
+| **Windows `.exe`** | [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases) → `UtahVidia-Gaming.exe` |
+| **ZIP + `.bat`** | [Download ZIP](https://github.com/utahisnotastate/utahvidia/archive/refs/heads/main.zip) → `launchers/UtahVidia-Gaming.bat` |
+| **Full tutorial** | [gaming-tutorial.md](gaming-tutorial.md) |
 
-| Guide | Best for |
+Everything is **free and fully unlocked** (MIT).
+
+**Optional donations:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
+
+## Guides
+
+| Guide | Audience |
 |-------|----------|
-| **[Gamer tutorial (start here)](gaming-tutorial.md)** | Step-by-step install, demo, benchmark, unlock |
-| **[GPU Unlock Patron Program](gpu-unlock-patron.md)** | Donate → permanently unlock Pro profiles |
+| **[Gamer tutorial](gaming-tutorial.md)** | Download exe, run unlock, tune profiles |
 | [Gaming FAQ](gaming-faq.md) | Common questions |
-| [For children](gaming-children.md) | Laser cities & comic-book frames |
+| [For children](gaming-children.md) | Simple GPU future explainer |
 | [Overview](gaming-overview.md) | Illusion vs physics |
 | [Technical](gaming-technical.md) | Modules & API |
-| [Latency Shield](latency-shield.md) | Frame reconstruction architecture |
-
-## Quick commands
+| [Latency Shield](latency-shield.md) | Frame reconstruction |
 
 ```bash
-pip install -e ".[dev]"
-utahvidia gaming      # gaming stack demo
-utahvidia patron      # check GPU unlock status
-utahvidia bench       # benchmark your GPU
+utahvidia-gaming    # if Python installed
+utahvidia gaming    # same stack via main CLI
 ```
-
-## Support Utah-Vid-ia (unlock Pro profiles)
-
-**PayPal:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)  
-**Memo:** `GPU-UNLOCK`
 
 [Back to documentation index](index.md)

@@ -1,62 +1,59 @@
 # Mängude KKK
 
+## Allalaadimine ja käivitamine
+
+### Kuidas seda Gitita käivitada?
+
+Laadi **`UtahVidia-Gaming.exe`** [Releases](https://github.com/utahisnotastate/utahvidia/releases) lehelt või kasuta `launchers/UtahVidia-Gaming.bat` [ZIP allalaadimisest](https://github.com/utahisnotastate/utahvidia/archive/refs/heads/main.zip).
+
+Vaata [gaming-tutorial.md](gaming-tutorial.md).
+
+### Kas midagi on makse taga lukus?
+
+**Ei.** Kõik mängude profiilid ja funktsioonid on tasuta. Annetused on valikulised [PayPal](https://www.paypal.com/donate/?business=utah%40utahcreates.com) kaudu.
+
+### Miks exe on nii suur?
+
+See sisaldab Pythoni ja PyTorchi (~200MB+). Kui sul on Python, kasuta `.bat` käivitajat.
+
+---
+
 ## Üldine
 
 ### Kas Utah-Vid-ia asendab mu GPU?
 
-**Ei.** See paneb sinu GPU targemalt tööle — parem kaadrite tempimine, valikulised upscale teed, multi-GPU jagamine, VRAM virtualiseerimise demod. Füüsika piirab endiselt tipptulemust.
+Ei — see aitab sinu olemasoleval GPU-l targemalt töötada. Füüsika seab endiselt piirid.
 
 ### Kas see on ohutu?
 
-Jah. Avatud lähtekood (MIT), pip paketis pole kernel-režiimi rootkit'e. Microvisor on **ainult simulatsioon**. Patron avamine on kohalik konfiguratsioonifail — mitte nuhkvara.
+Jah. Avatud lähtekood (MIT). Pole tasulisi avamisfaile. Microvisor on pip paketis ainult simulatsioon.
 
-### Kas see töötab mu mänguga?
+### Kas see töötab mu mängus automaatselt?
 
-v0.3 on **vahevara + demod**. Integreeri täna Python/skriptide kaudu. Otsene süst AAA mängudesse on teekonnal (Driver API / platvormipartnerid).
+v0.4 on vahevara + üheklõps avamise demo. Otsene AAA mängu integratsioon on teekonnal.
 
 ---
 
-## Patron / annetused
+## Annetused
 
-### Mida ma annetuse eest saan?
+### Kas pean annetama?
 
-[Pro Gaming Profiles](gpu-unlock-patron.md): `patron_max`, `patron_vram`, `patron_legend` — häälestatud eelseaded latency shield, speculative intent ja osmotic VRAM jaoks.
+Ei. Utah-Vid-ia on tasuta.
 
-### Minimaalne annetus?
+### Kuidas annetada?
 
-Mis tahes summa memo-ga **`GPU-UNLOCK`**. Soovitus: 5 $ Supporter, 15 $ Enthusiast, 50 $ Legend.
-
-### Kas avamine on tõesti jäädav?
-
-Jah — salvestatud `~/.utahvidia/patron.unlock` või `UTAHVIDIA_PATRON=1`. Pole tellimust. Ühekordne annetus, igaveseks sinu arvutites (auusüsteem).
-
-### Kas saan tagasimakse?
-
-Kehtib PayPal standardne tagasimaksepoliitika. Võta ühendust GitHub issue kaudu, kui eelseaded sinu riistvaral ebaõnnestuvad.
+[utah@utahcreates.com PayPal](https://www.paypal.com/donate/?business=utah%40utahcreates.com) — iga summa aitab võrdlusteste ja dokumentatsiooni.
 
 ---
 
 ## Tehniline
 
-### NVIDIA vs AMD vs Intel?
+### NVIDIA vs AMD?
 
-PyTorch tee töötab kõikjal. Natiivsed CUDA tuumad (latency shield, ZEO) vajavad NVIDIA + valikulist NVCC-d.
+PyTorch töötab kõikjal. Natiivsed CUDA tuumad vajavad NVIDIA + valikulist NVCC-d.
 
-### Miks ma ei näe Cyberpunk / Fortnite'is kõrgemat FPS-i?
+## Teised keeled
 
-Need mängud ei kutsu Utah-Vid-ia automaatselt. Käivita esmalt `utahvidia gaming` ja kohandatud skriptid. Patron profiilid kehtivad, kui **sina** suunad kaadreid mootori kaudu.
-
-### Mis on „perceptual upscale"?
-
-Renderda madal resolutsioon sisemiselt, sünteesi detail holographic/tensor teel — sama idee nagu DLSS/FSR, Utah-Vid-ia stiilis demo `UtahRealityEngine.perceptual_upscale_path`-is.
-
----
-
-## Tugi
-
-- GitHub Issues: [utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia/issues)  
-- Anneta: [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)  
+[English](../en/gaming-faq.md) · [中文](../zh/gaming-faq.md) · [Eesti](../et/gaming-faq.md) · [Русский](../ru/gaming-faq.md) · [Suomi](../fi/gaming-faq.md) · [日本語](../ja/gaming-faq.md)
 
 [Täielik õpetus](gaming-tutorial.md) · [Mängude keskus](gaming-index.md)
-
-**Teised keeled:** [English](../en/gaming-faq.md) · [Eesti](../et/gaming-faq.md) · [Русский](../ru/gaming-faq.md) · [Suomi](../fi/gaming-faq.md)

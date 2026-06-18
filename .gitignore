@@ -19,3 +19,8 @@ htmlcov/
 # PyTorch JIT extension artifacts
 utahvidia_zeo_shield*.so
 utahvidia_zeo_shield*/
+
+# PyInstaller
+build/
+dist/
+*.spec

@@ -1,47 +1,37 @@
 # Поддержать Utah-Vid-ia
 
-Utah-Vid-ia — проект с открытым исходным кодом (MIT). Пожертвования финансируют бенчмарки, переводы, работу над CUDA-ядрами и **Pro Gaming Profiles** для patron'ов.
+Utah-Vid-ia **бесплатен и с открытым исходным кодом (MIT)**. Все игровые функции разблокированы — оплата не требуется.
 
-## PayPal
+## PayPal (опционально)
 
 **Email:** `utah@utahcreates.com`
 
-**Ссылка для пожертвования:** [paypal.com/donate — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
+**Пожертвовать:** [paypal.com/donate](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
----
+Пожертвования финансируют GPU-бенчмарки, переводы, работу над CUDA-ядрами и сборки Windows exe.
 
-## Геймерам — навсегда разблокируйте GPU
+## Геймерам
 
-Пожертвуйте с memo PayPal **`GPU-UNLOCK`**, чтобы включить **Pro Gaming Profiles** на вашей машине навсегда (локальный unlock-файл — без подписки).
+Скачайте бесплатный игровой unlock — пожертвование не нужно:
 
-| Уровень | Рекомендуется | Преимущества |
-|---------|---------------|--------------|
-| Supporter | $5+ | Pro-профили + patron CLI |
-| Enthusiast | $15+ | + опционально упоминание в [PATRONS.md](../../PATRONS.md) |
-| Legend | $50+ | + ранние релизы с тегом `@patron` |
-
-**Полное руководство:** [Программа GPU Unlock Patron](gpu-unlock-patron.md) · [Учебник для геймеров](gaming-tutorial.md)
-
-```bash
-utahvidia patron   # check unlock status
-```
-
----
+- [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases) → `UtahVidia-Gaming.exe`
+- [Учебник для геймеров](gaming-tutorial.md)
 
 ## На что идут пожертвования
 
-- Бенчмарк-стенды с GPU разных вендоров  
-- CI с CUDA toolchain  
-- Переведённая документация (EN, 中文, ET, RU, FI, JA)  
-- Прототипное оборудование фотонного моста  
-- Настройка Patron-пресетов по бенчмаркам сообщества  
-
----
+- Бенчмарк-стенды разных вендоров  
+- CI-сборки `UtahVidia-Gaming.exe`  
+- Переведённая документация  
+- Прототипы фотонного моста  
 
 ## Другие способы помочь
 
-- Звезда репозиторию: [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
-- Поделитесь [учебником для геймеров](gaming-tutorial.md) с сообществом  
-- Pull request'ы приветствуются (ядра, документация, пресеты)  
+- Звезда [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
+- Поделитесь [руководством по загрузке](../../launchers/README.md)  
+- Pull request'ы приветствуются  
+
+## Другие языки
+
+[English](../en/donate.md) · [中文](../zh/donate.md) · [Eesti](../et/donate.md) · [Русский](../ru/donate.md) · [Suomi](../fi/donate.md) · [日本語](../ja/donate.md)
 
 [Назад к индексу документации](index.md)

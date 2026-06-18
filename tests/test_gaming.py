@@ -43,3 +43,18 @@ def test_speculative_intent():
     assert len(phantoms) == 3
     collapsed = engine.collapse(intent, intent)
     assert collapsed is not None
+
+
+def test_gaming_profiles_free():
+    from utahvidia.gaming_profiles import apply_gaming_profile, list_profiles
+
+    assert "legend" in list_profiles()
+    engine = UtahRealityEngine()
+    cfg = apply_gaming_profile(engine, "legend")
+    assert cfg["virtual_gigabytes"] == 512
+
+
+def test_gaming_launcher_runs():
+    from utahvidia.gaming_launcher import run_gaming_unlock
+
+    assert run_gaming_unlock(width=32, height=32) == 0

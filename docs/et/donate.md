@@ -1,47 +1,37 @@
 # Toeta Utah-Vid-ia projekti
 
-Utah-Vid-ia on avatud lähtekoodiga (MIT). Annetused aitavad rahastada võrdlusteste, tõlkeid, CUDA tuuma tööd ja **Pro Gaming Profiles** patronitele.
+Utah-Vid-ia on **tasuta ja avatud lähtekoodiga (MIT)**. Kõik mängufunktsioonid on avatud — maksmine pole vajalik.
 
-## PayPal
+## PayPal (valikuline)
 
 **E-post:** `utah@utahcreates.com`
 
-**Annetuse link:** [paypal.com/donate — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
+**Anneta:** [paypal.com/donate](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
----
+Annetused rahastavad GPU võrdlusteste, tõlkeid, CUDA tuuma tööd ja Windows exe build'e.
 
-## Mängijatele — ava oma GPU jäädavalt
+## Mängijatele
 
-Anneta PayPal memo-ga **`GPU-UNLOCK`**, et lubada **Pro Gaming Profiles** oma masinas igaveseks (kohalik avamise fail — pole tellimust).
+Laadi tasuta mängude avamine — annetus pole vajalik:
 
-| Tase | Soovitus | Eelised |
-|------|----------|---------|
-| Supporter | 5 $+ | Pro profiilid + patron CLI |
-| Enthusiast | 15 $+ | + valikuline [PATRONS.md](../../PATRONS.md) krediit |
-| Legend | 50 $+ | + varajased `@patron` väljalaske sildid |
-
-**Täielik juhend:** [GPU Unlock Patron Programm](gpu-unlock-patron.md) · [Mängija õpetus](gaming-tutorial.md)
-
-```bash
-utahvidia patron   # check unlock status
-```
-
----
+- [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases) → `UtahVidia-Gaming.exe`
+- [Mängija õpetus](gaming-tutorial.md)
 
 ## Mida annetused võimaldavad
 
-- Mitme tootja GPU võrdlustestiseadmed  
-- CI CUDA tööriistaahelaga  
-- Tõlgitud dokumentatsioon (EN, 中文, ET, RU, FI, JA)  
-- Footooniline silla prototüübiriistvara  
-- Patron eelseadete häälestus kogukonna võrdlustestidest  
-
----
+- Mitme tootja võrdlustestiseadmed  
+- `UtahVidia-Gaming.exe` CI build'id  
+- Tõlgitud dokumentatsioon  
+- Footooniline silla prototüübid  
 
 ## Muud viisid aidata
 
 - Tähe repo: [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
-- Jaga [mängija õpetust](gaming-tutorial.md) oma kogukonnaga  
-- Pull requestid on teretulnud (tuumad, dokumentatsioon, eelseaded)  
+- Jaga [allalaadimisjuhendit](../../launchers/README.md)  
+- Pull requestid on teretulnud  
+
+## Teised keeled
+
+[English](../en/donate.md) · [中文](../zh/donate.md) · [Eesti](../et/donate.md) · [Русский](../ru/donate.md) · [Suomi](../fi/donate.md) · [日本語](../ja/donate.md)
 
 [Tagasi dokumentatsiooni indeksisse](index.md)

@@ -1,213 +1,124 @@
-# Mängija õpetus — nullist GPU avamiseni
+# Mängija õpetus — paigalduseta mängude avamine
 
-Täielik juhend: paigalda Utah-Vid-ia, käivita mängude virn, võrdle oma GPU-d ja valikuliselt **ava Pro profiilid jäädavalt** [Patron Programmi](gpu-unlock-patron.md) kaudu.
+Käivita **täielik Utah-Vid-ia mängude virn** ilma Gitita, avamisfailideta ja maksmata.
 
-**Aeg:** ~30 minutit · **Maksumus:** 0 € (Pro avamine valikuline annetuse kaudu)
-
----
-
-## Mida sa saavutad
-
-1. Paigaldad Utah-Vid-ia Windowsile, Linuxile või macOS-ile  
-2. Käivitad **Asymptotic Reality Engine** mängude demo  
-3. Mõistad latency shield + perceptual upscale **oma** GPU-l  
-4. Võrdled enne/pärast tunnet  
-5. Valikuliselt **avaad Pro Gaming Profiles jäädavalt** PayPal annetusega  
+**Valikulised annetused:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
 ---
 
-## Eeltingimused
+## Kiireim tee: laadi `.exe`
 
-| Nõue | Märkused |
-|------|----------|
-| Python 3.10+ | `py --version` või `python3 --version` |
-| pip | Paketihaldur |
-| Git | Klooni GitHubist |
-| GPU (valikuline) | NVIDIA CUDA = parim; AMD/Intel PyTorchi kaudu; CPU = demo režiim |
+1. Mine [GitHub Releases](https://github.com/utahisnotastate/utahvidia/releases)
+2. Laadi alla **`UtahVidia-Gaming.exe`**
+3. Topeltklõps
+
+Näed:
+
+```
+UTAH-VIDIA GAMING UNLOCK
+Full stack enabled — no install, no unlock file needed
+[1/4] Boot gaming enclave...
+[2/4] Latency shield frame reconstruction...
+[3/4] Perceptual upscale + speculative intent...
+[4/4] Fractal + holographic paths...
+GAMING UNLOCK COMPLETE — all profiles active
+```
+
+Vajuta Enter sulgemiseks (pakitud exe puhul).
+
+Release'i veel pole? Kasuta allpool valikut 2 või 3, või palu hooldajal käivitada [Build workflow](https://github.com/utahisnotastate/utahvidia/actions).
 
 ---
 
-## Samm 1 — Klooni ja paigalda
+## Valik 2 — ZIP + `.bat` (Python vajalik, Git pole vaja)
+
+1. Laadi [Source ZIP](https://github.com/utahisnotastate/utahvidia/archive/refs/heads/main.zip)
+2. Paki lahti suvalisse kohta (nt `Desktop\utahvidia-main`)
+3. Topeltklõpsa **`launchers\UtahVidia-Gaming.bat`**
+
+Paigaldab kaustast ja käivitab täieliku avamise.
+
+---
+
+## Valik 3 — Python üherea käsk
+
+Kui sul on Python 3.10+:
 
 ```bash
-git clone https://github.com/utahisnotastate/utahvidia.git
-cd utahvidia
-pip install -e ".[dev]"
-```
-
-Windows PowerShell:
-
-```powershell
-git clone https://github.com/utahisnotastate/utahvidia.git
-cd utahvidia
-py -m pip install -e ".[dev]"
-```
-
-Kontrolli:
-
-```bash
-utahvidia --help
-# või: py -m utahvidia.cli
+pip install git+https://github.com/utahisnotastate/utahvidia.git
+utahvidia-gaming
 ```
 
 ---
 
-## Samm 2 — Käivita esimene mängude demo
+## Mis avatakse (kõik tasuta)
 
-```bash
-utahvidia gaming
-```
+| Funktsioon | Mida teeb |
+|------------|-----------|
+| Latency shield | Sujuvamad kaadrid liikumisteadliku taastamise kaudu |
+| Profile `max` | Parim vaikimisi häälestus (rakendatakse automaatselt) |
+| Perceptual upscale | Madala resolutsiooni baasist kõrgema resolutsiooni demoteele |
+| Speculative intent | Eel-renderdus ennustatud sisendi liikumise põhjal |
+| Osmotic VRAM | Suur virtuaalse mälu ala (simulatsioon) |
+| Photonic / fractal / holographic | Täielik Reality Engine demo |
 
-Oodatav väljund (lühendatud):
-
-```
-UTAH-VIDIA // Universal Compute Bridge v0.3.0
-microvisor: [MICROVISOR SIM] ...
-Latency shield: (180, 320, 4) in X.XX ms
-Perceptual upscale: (360, 640, 3)
-Speculative frame: (180, 320, 4)
-```
-
-**Mis juhtus:**
-
-- **Latency shield** segas praeguse + ajaloo kaadreid liikumisvektorite abil (sujuvam liikumistunne).  
-- **Perceptual upscale** kahekordistas eraldusvõime madala resolutsiooni baasist (AI-stiilis demo).  
-- **Speculative intent** eel-renderdas fantoomkaadreid hiire-sarnaste deltade põhjal.  
+Saadaolevad profiilid: `competitive`, `cinematic`, `vr`, `max`, `vram`, `legend`
 
 ---
 
-## Samm 3 — Täielik virna tuur
+## Samm-sammult: häälesta GPU (valikuline)
 
-```bash
-utahvidia all
-```
-
-Käivitab ghost kernel, compiler, osmotic router, photonic sim, ZEO-Shield, orchestrator **ja** mängude virna.
-
----
-
-## Samm 4 — Võrdle oma GPU-d
-
-```bash
-utahvidia bench
-```
-
-Salvesta väljund — kasulik GitHub issue'de ja Patron profiilide võrdlemise jaoks.
-
-CUDA süsteemidel NVCC-ga võivad natiivsed tuumad esimesel käivitusel JIT-kompileeruda (ühekordne lisasekundite kulu).
-
----
-
-## Samm 5 — Python: häälesta kaadreid oma masinal
-
-Loo `my_gaming_test.py`:
+Pärast avamise ühekordset käivitamist loo `my_game.py`:
 
 ```python
-import torch
 from utahvidia import UtahRealityEngine
+from utahvidia.gaming_profiles import apply_gaming_profile
 from utahvidia.latency_shield import DisplayHookConfig
+import torch
 
-# Match your monitor or game resolution
 W, H = 1920, 1080
 engine = UtahRealityEngine(display_hook=DisplayHookConfig(width=W, height=H))
+apply_gaming_profile(engine, "competitive")  # or cinematic, max, legend
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"Device: {device}")
-print(engine.bootstrap_gaming_enclave())
-
 current = torch.rand(H, W, 4, device=device)
 history = torch.rand(H, W, 4, device=device)
 motion = torch.randn(H, W, 2, device=device) * 0.3
 
 frame = engine.reconstruct_frame(current, history, motion)
-upscaled = engine.perceptual_upscale_path(current[..., :3])
-
-print("Frame:", frame.shape, "Upscaled:", upscaled.shape)
-```
-
-Käivita:
-
-```bash
-python my_gaming_test.py
+print("OK", frame.shape)
 ```
 
 ---
 
-## Samm 6 — Võistlus- vs kinoprofiilid (tasuta vaikimisi)
-
-```python
-from utahvidia.patron import apply_gaming_profile, list_profiles
-
-print(list_profiles())  # competitive, cinematic, vr, patron_* if unlocked
-
-engine = UtahRealityEngine()
-apply_gaming_profile(engine, "competitive")  # lower alpha = snappier
-# apply_gaming_profile(engine, "cinematic")  # smoother interpolation
-```
-
-| Profiil | Sobib | Latency shield alpha |
-|---------|-------|----------------------|
-| `competitive` | e-spord, kiire hiir | 0.75 (teravam) |
-| `cinematic` | ühe mängija, lugu | 0.55 (sujuvam) |
-| `vr` | peakomplektid | 0.60 + vähendatud spekulatiivne horisont |
-
-Ainult Patron profiilid (pärast avamist): `patron_max`, `patron_vram`, `patron_legend`.
-
----
-
-## Samm 7 — Ava Pro Gaming Profiles
-
-1. Anneta PayPali kaudu: [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)  
-2. Märkus/memo: **`GPU-UNLOCK`**  
-3. Loo patron fail või sea keskkonnamuutuja — [täielikud juhised](gpu-unlock-patron.md#activate-your-unlock)  
-4. Kontrolli:
-
-```bash
-utahvidia patron
-```
-
-5. Rakenda max profiil:
-
-```python
-from utahvidia import UtahRealityEngine
-from utahvidia.patron import apply_gaming_profile, patron_status
-
-print(patron_status())
-engine = UtahRealityEngine()
-apply_gaming_profile(engine, "patron_max")
-```
-
-**Oled selles masinas Pro eelseaded jäädavalt avanud** (fail või env püsib taaskäivituste üle).
-
----
-
-## Samm 8 — Tõrkeotsing
+## Tõrkeotsing
 
 | Probleem | Lahendus |
 |----------|----------|
-| `python` ei leitud (Windows) | Kasuta `py` |
-| CUDA ei tuvastatud | Paigalda [PyTorch + CUDA](https://pytorch.org); CPU režiim töötab ikka |
-| Natiivse tuuma kompileerimine ebaõnnestub | Kasuta PyTorch teed; sea API-s `use_native=False` |
-| Patron pole aktiivne | Kontrolli `~/.utahvidia/patron.unlock` või `UTAHVIDIA_PATRON=1` |
-| FPS ei muutu teistes mängudes | Utah-Vid-ia on vahevara — integreeri esmalt õpetuse skriptide kaudu; täielik mängu hook on teekonnal |
+| Releases lehel pole `.exe` | Kasuta `.bat` või `utahvidia-gaming`; hooldaja saab käivitada Actions workflow |
+| Python ei leitud | Paigalda [python.org](https://python.org) või kasuta `.exe` |
+| exe blokeeritud Windowsis | Klõpsa „Rohkem teavet" → „Käivita ikkagi" (allkirjastamata avatud lähtekoodi build) |
+| Suur allalaadimine | Exe sisaldab PyTorchi (~200MB+) — väiksemaks kasuta `.bat` teed |
+| AAA mängudes FPS ei muutu | Utah-Vid-ia on vahevara — integreeri skriptide kaudu; otsene mängu hook on teekonnal |
 
 ---
 
-## Samm 9 — Jaga ja toeta
+## Toeta projekti (valikuline)
 
-- Tähe repo: [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
-- Räägi sõpradele: anneta **GPU-UNLOCK** → Pro profiilid  
-- Striimijad: lisa link [gpu-unlock-patron.md](gpu-unlock-patron.md) oma bio-sse  
+Igavesti tasuta. Annetused aitavad riistvara testimist ja tõlkeid:
+
+**PayPal:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
 ---
 
 ## Järgmised lugemised
 
-- [GPU Unlock Patron Programm](gpu-unlock-patron.md)  
-- [Mängude KKK](gaming-faq.md)  
-- [Latency Shield süvauuring](latency-shield.md)  
-- [Lastele — miks GPU-d loevad](gaming-children.md)  
+- [Mängude keskus](gaming-index.md)
+- [Mängude KKK](gaming-faq.md)
+- [Allalaadimisjuhend](../../launchers/README.md)
 
-[Tagasi mängude keskusesse](gaming-index.md)
+## Teised keeled
 
-**Teised keeled:** [English](../en/gaming-tutorial.md) · [Eesti](../et/gaming-tutorial.md) · [Русский](../ru/gaming-tutorial.md) · [Suomi](../fi/gaming-tutorial.md)
+[English](../en/gaming-tutorial.md) · [中文](../zh/gaming-tutorial.md) · [Eesti](../et/gaming-tutorial.md) · [Русский](../ru/gaming-tutorial.md) · [Suomi](../fi/gaming-tutorial.md) · [日本語](../ja/gaming-tutorial.md)
+
+[Tagasi dokumentatsiooni indeksisse](index.md)
