@@ -65,6 +65,12 @@ utahvidia zeo
 # Unified Silicon-Transparency orchestrator
 utahvidia orchestrator
 
+# Asymptotic Reality Engine (gaming stack)
+utahvidia gaming
+
+# Latency shield frame reconstruction
+utahvidia latency
+
 # Benchmark vs torch.matmul
 utahvidia bench
 # or
@@ -104,7 +110,7 @@ The `UtahSiliconOrchestrator` is the drop-in **Silicon-Transparency API**:
 
 ## Status
 
-Alpha prototype (v0.2.0). Ghost layer records portable IR metadata; ZEO native kernel requires CUDA toolchain for JIT compile. PyTorch fallbacks run everywhere.
+Alpha prototype (v0.3.0). Includes **Asymptotic Reality Engine** for gaming: latency shield frame reconstruction, osmotic VRAM simulation, photonic multi-GPU, holographic weights, fractal hyper-graph, and speculative intent. Microvisor is simulation-only.
 
 ## License
 

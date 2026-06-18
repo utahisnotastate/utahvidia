@@ -11,6 +11,8 @@ import torch
 from utahvidia.compiler import trigger_compiler
 from utahvidia.core import UtahVidIaEngine, activate_ghost_layer
 from utahvidia.orchestrator import UtahSiliconOrchestrator
+from utahvidia.reality_engine import UtahRealityEngine
+from utahvidia.latency_shield import DisplayHookConfig
 from utahvidia.osmotic import UtahOsmoticRouter
 from utahvidia.photonic_sim import PhotonicBridge, route_swarm_data
 from utahvidia.zeo_shield import (
@@ -23,8 +25,8 @@ from utahvidia.zeo_shield import (
 
 def _banner() -> None:
     print("=" * 60)
-    print("  UTAH-VIDIA // Universal Compute Bridge v0.2.0")
-    print("  Ghost | Compiler | Osmotic | Photonic | ZEO-Shield")
+    print("  UTAH-VIDIA // Universal Compute Bridge v0.3.0")
+    print("  Ghost | Compiler | Osmotic | ZEO | Reality Engine")
     print("=" * 60)
 
 
@@ -116,6 +118,41 @@ def demo_orchestrator() -> None:
     print(f"  Final activation shape: {layers[-1].shape}")
 
 
+def demo_gaming() -> None:
+    engine = UtahRealityEngine(display_hook=DisplayHookConfig(width=320, height=180))
+    boot = engine.bootstrap_gaming_enclave()
+    for k, v in boot.items():
+        print(f"  {k}: {v}")
+
+    device = engine.device if engine.device != "cpu" else "cpu"
+    h, w = 180, 320
+    current = torch.rand(h, w, 4, device=device)
+    history = torch.rand(h, w, 4, device=device)
+    motion = torch.randn(h, w, 2, device=device) * 0.5
+
+    t0 = time.perf_counter()
+    frame = engine.reconstruct_frame(current, history, motion)
+    elapsed = (time.perf_counter() - t0) * 1000
+
+    latent = torch.randn(engine.holographic.latent_dim, device=device)
+    upscaled = engine.perceptual_upscale_path(current[..., :3], latent)
+    speculative = engine.speculative_render_cycle(current, (1.5, -0.5))
+
+    weights = torch.randn(64, device=device)
+    grad = torch.randn(64, device=device)
+    engine.fractal.ring.push(1, grad)
+    new_w = engine.distributed_weight_step(weights, grad, step=1)
+
+    print(f"  Latency shield: {tuple(frame.shape)} in {elapsed:.2f} ms")
+    print(f"  Perceptual upscale: {tuple(upscaled.shape)}")
+    print(f"  Speculative frame: {tuple(speculative.shape)}")
+    print(f"  Fractal step: weights {tuple(new_w.shape)}")
+
+
+def demo_latency() -> None:
+    demo_gaming()
+
+
 def demo_all() -> None:
     _banner()
     print("\n[1/6] Kernel Ghosting Layer")
@@ -130,6 +167,8 @@ def demo_all() -> None:
     demo_zeo()
     print("\n[6/6] Silicon-Transparency Orchestrator")
     demo_orchestrator()
+    print("\n[BONUS] Asymptotic Reality Engine (Gaming)")
+    demo_gaming()
     print("\n[UTAH-VIDIA] All subsystems nominal.")
 
 
@@ -139,7 +178,7 @@ def main() -> None:
         "command",
         nargs="?",
         default="all",
-        choices=["all", "ghost", "compiler", "osmotic", "photonic", "zeo", "orchestrator", "bench"],
+        choices=["all", "ghost", "compiler", "osmotic", "photonic", "zeo", "orchestrator", "gaming", "latency", "bench"],
         help="Which subsystem demo to run",
     )
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable debug logging")
@@ -165,6 +204,8 @@ def main() -> None:
         "photonic": lambda: (_banner(), demo_photonic()),
         "zeo": lambda: (_banner(), demo_zeo()),
         "orchestrator": lambda: (_banner(), demo_orchestrator()),
+        "gaming": lambda: (_banner(), demo_gaming()),
+        "latency": lambda: (_banner(), demo_latency()),
     }
     commands[args.command]()
 
