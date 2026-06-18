@@ -12,7 +12,11 @@
 | [CTO-dele](cto.md) | Strateegia, eelarve, risk, tarnija otsused |
 | [CUDA programmeerijatele](cuda-programmers.md) | Arendajad, kes migreeruvad CUDA/nvcc-st |
 | [Migratsioonijuhend](migration-guide.md) | Samm-sammult kasutuselevõtt olemasolevatest virnadest |
-| [Anneta](donate.md) | Toeta jätkuvat arendust |
+| [Mängud ja GPU tulevik](gaming-index.md) | Õpetused, latency shield, **GPU Unlock Patron** |
+| [Mängija õpetus](gaming-tutorial.md) | Täielik juhend mängijatele ja striimijatele |
+| [GPU Unlock Patron](gpu-unlock-patron.md) | Anneta → Pro profiilid igaveseks |
+| [Mängude KKK](gaming-faq.md) | Patron, turvalisus, ühilduvus |
+| [Anneta](donate.md) | PayPal utah@utahcreates.com |
 
 ## Kiirlingid
 

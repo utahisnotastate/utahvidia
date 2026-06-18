@@ -12,7 +12,11 @@
 | [CTO 向け](cto.md) | 戦略、予算、リスク、ベンダー選定 |
 | [CUDA プログラマー向け](cuda-programmers.md) | CUDA/nvcc から移行する開発者 |
 | [移行ガイド](migration-guide.md) | 既存スタックからの段階的な導入 |
-| [寄付](donate.md) | 継続的な開発を支援する |
+| [ゲーム & GPU の未来](gaming-index.md) | チュートリアル、レイテンシーシールド、**GPU アンロック パトロン** |
+| [ゲーマーチュートリアル](gaming-tutorial.md) | プレイヤー & 配信者向け完全ウォークスルー |
+| [GPU アンロック パトロン](gpu-unlock-patron.md) | 寄付 → Pro プロファイル永久 |
+| [ゲーム FAQ](gaming-faq.md) | パトロン、安全性、互換性 |
+| [寄付](donate.md) | PayPal utah@utahcreates.com |
 
 ## クイックリンク
 
@@ -23,3 +27,7 @@
 ## 他の言語
 
 [English](../en/) · [中文](../zh/) · [Eesti](../et/) · [Русский](../ru/) · [Suomi](../fi/)
+
+## 支援
+
+[PayPal で寄付 — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)

@@ -12,8 +12,11 @@
 | [For CTOs](cto.md) | Strategy, budget, risk, vendor decisions |
 | [For CUDA programmers](cuda-programmers.md) | Developers migrating from CUDA/nvcc |
 | [Migration guide](migration-guide.md) | Step-by-step adoption from existing stacks |
-| [Gaming & GPU future](gaming-index.md) | Latency shield, reality engine, forever-silicon |
-| [Donate](donate.md) | Support ongoing development |
+| [Gaming & GPU future](gaming-index.md) | Tutorials, latency shield, **GPU Unlock Patron** |
+| [Gamer tutorial](gaming-tutorial.md) | Full walkthrough for players & streamers |
+| [GPU Unlock Patron](gpu-unlock-patron.md) | Donate → Pro profiles forever |
+| [Gaming FAQ](gaming-faq.md) | Patron, safety, compatibility |
+| [Donate](donate.md) | PayPal utah@utahcreates.com |
 
 ## Quick links
 

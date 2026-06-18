@@ -6,19 +6,28 @@
 
 ## Documentation
 
-Full guides by role and language (each language in its own folder):
-
 **[docs/README.md](docs/README.md)** — language picker
+
+### Gamers
+
+| Guide | Link |
+|-------|------|
+| **Tutorial (start here)** | [docs/en/gaming-tutorial.md](docs/en/gaming-tutorial.md) |
+| **GPU Unlock Patron** | [docs/en/gpu-unlock-patron.md](docs/en/gpu-unlock-patron.md) — donate → Pro profiles forever |
+| Gaming hub | [docs/en/gaming-index.md](docs/en/gaming-index.md) |
+
+```bash
+utahvidia gaming    # demo
+utahvidia patron    # check unlock / donate link
+```
+
+**Unlock:** PayPal [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com) · memo **`GPU-UNLOCK`**
+
+### All languages
 
 | English | 中文 | Eesti | Русский | Suomi | 日本語 |
 |---------|------|-------|---------|-------|--------|
 | [en/](docs/en/) | [zh/](docs/zh/) | [et/](docs/et/) | [ru/](docs/ru/) | [fi/](docs/fi/) | [ja/](docs/ja/) |
-
-Audiences: [children](docs/en/children.md) · [non-technical](docs/en/non-technical.md) · [technical](docs/en/technical.md) · [CTOs](docs/en/cto.md) · [CUDA programmers](docs/en/cuda-programmers.md) · [migration](docs/en/migration-guide.md)
-
-## Support
-
-Donate via PayPal: **[utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)**
 
 ## Architecture
 

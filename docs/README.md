@@ -1,6 +1,6 @@
 # Utah-Vid-ia Documentation
 
-Choose your language. Each folder is a complete, standalone documentation set — one language per page, no mixed translations.
+Choose your language. Each folder is a complete, standalone set — **one language per page**.
 
 | Language | Folder |
 |----------|--------|
@@ -11,12 +11,18 @@ Choose your language. Each folder is a complete, standalone documentation set �
 | Suomi (Finnish) | [fi/](fi/) |
 | 日本語 (Japanese) | [ja/](ja/) |
 
-## Support the project
+## Gamers — start here
 
-PayPal: **[utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)**
+| English | What |
+|---------|------|
+| [Gamer tutorial](en/gaming-tutorial.md) | Install, demo, unlock Pro profiles |
+| [GPU Unlock Patron](en/gpu-unlock-patron.md) | Donate → permanently unlock presets |
+| [Gaming FAQ](en/gaming-faq.md) | Common questions |
 
-See [en/donate.md](en/donate.md) for details (English).
+**PayPal:** [utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com) · memo **`GPU-UNLOCK`**
 
-## Architecture diagrams
+Localized gamer hubs: [zh](zh/gaming-index.md) · [et](et/gaming-index.md) · [ru](ru/gaming-index.md) · [fi](fi/gaming-index.md) · [ja](ja/gaming-index.md)
+
+## Architecture
 
 Technical Mermaid diagrams (English): [ARCHITECTURE.md](ARCHITECTURE.md)

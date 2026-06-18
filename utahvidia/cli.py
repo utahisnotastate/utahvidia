@@ -13,6 +13,7 @@ from utahvidia.core import UtahVidIaEngine, activate_ghost_layer
 from utahvidia.orchestrator import UtahSiliconOrchestrator
 from utahvidia.reality_engine import UtahRealityEngine
 from utahvidia.latency_shield import DisplayHookConfig
+from utahvidia.patron import apply_gaming_profile, patron_status
 from utahvidia.osmotic import UtahOsmoticRouter
 from utahvidia.photonic_sim import PhotonicBridge, route_swarm_data
 from utahvidia.zeo_shield import (
@@ -25,7 +26,7 @@ from utahvidia.zeo_shield import (
 
 def _banner() -> None:
     print("=" * 60)
-    print("  UTAH-VIDIA // Universal Compute Bridge v0.3.0")
+    print("  UTAH-VIDIA // Universal Compute Bridge v0.3.1")
     print("  Ghost | Compiler | Osmotic | ZEO | Reality Engine")
     print("=" * 60)
 
@@ -118,7 +119,23 @@ def demo_orchestrator() -> None:
     print(f"  Final activation shape: {layers[-1].shape}")
 
 
+def demo_patron() -> None:
+    status = patron_status()
+    print(f"  {status.banner()}")
+    print(f"  Source: {status.source}")
+    print(f"  Profiles: {', '.join(status.available_profiles)}")
+    print(f"  Donate: {status.paypal_email} (memo GPU-UNLOCK)")
+    if status.unlocked:
+        engine = UtahRealityEngine()
+        cfg = apply_gaming_profile(engine, "patron_max")
+        print(f"  Applied patron_max: alpha={cfg['alpha']}, VRAM virtual={cfg['virtual_gigabytes']} GB")
+    else:
+        print("  Unlock guide: docs/en/gpu-unlock-patron.md")
+
+
 def demo_gaming() -> None:
+    status = patron_status()
+    print(f"  {status.banner()}\n")
     engine = UtahRealityEngine(display_hook=DisplayHookConfig(width=320, height=180))
     boot = engine.bootstrap_gaming_enclave()
     for k, v in boot.items():
@@ -147,6 +164,9 @@ def demo_gaming() -> None:
     print(f"  Perceptual upscale: {tuple(upscaled.shape)}")
     print(f"  Speculative frame: {tuple(speculative.shape)}")
     print(f"  Fractal step: weights {tuple(new_w.shape)}")
+    if status.unlocked:
+        apply_gaming_profile(engine, "patron_max")
+        print("  Patron profile patron_max applied.")
 
 
 def demo_latency() -> None:
@@ -178,7 +198,7 @@ def main() -> None:
         "command",
         nargs="?",
         default="all",
-        choices=["all", "ghost", "compiler", "osmotic", "photonic", "zeo", "orchestrator", "gaming", "latency", "bench"],
+        choices=["all", "ghost", "compiler", "osmotic", "photonic", "zeo", "orchestrator", "gaming", "latency", "patron", "bench"],
         help="Which subsystem demo to run",
     )
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable debug logging")
@@ -206,6 +226,7 @@ def main() -> None:
         "orchestrator": lambda: (_banner(), demo_orchestrator()),
         "gaming": lambda: (_banner(), demo_gaming()),
         "latency": lambda: (_banner(), demo_latency()),
+        "patron": lambda: (_banner(), demo_patron()),
     }
     commands[args.command]()
 

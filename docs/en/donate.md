@@ -1,26 +1,47 @@
 # Support Utah-Vid-ia
 
-Utah-Vid-ia is open source (MIT). Donations help fund documentation, benchmarks, hardware testing, and native kernel work across NVIDIA, AMD, and Intel GPUs.
+Utah-Vid-ia is open source (MIT). Donations fund benchmarks, translations, CUDA kernel work, and **Pro Gaming Profiles** for patrons.
 
 ## PayPal
 
 **Email:** `utah@utahcreates.com`
 
-**Donate link:** [paypal.com/donate — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
+**Donate:** [paypal.com/donate — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
 
-You can send any amount. Thank you for supporting independent GPU middleware research.
+---
+
+## Gamers — permanently unlock your GPU
+
+Donate with PayPal memo **`GPU-UNLOCK`** to enable **Pro Gaming Profiles** on your machine forever (local unlock file — no subscription).
+
+| Tier | Suggested | Benefits |
+|------|-----------|----------|
+| Supporter | $5+ | Pro profiles + patron CLI |
+| Enthusiast | $15+ | + optional [PATRONS.md](../../PATRONS.md) credit |
+| Legend | $50+ | + early `@patron` release tags |
+
+**Full guide:** [GPU Unlock Patron Program](gpu-unlock-patron.md) · [Gamer tutorial](gaming-tutorial.md)
+
+```bash
+utahvidia patron   # check unlock status
+```
+
+---
 
 ## What donations enable
 
-- Multi-vendor benchmark rigs (consumer and datacenter GPUs)
-- CI runners with CUDA toolchains
-- Translated documentation maintenance
-- Photonic bridge prototype hardware (ESP32 nodes)
+- Multi-vendor GPU benchmark rigs  
+- CI with CUDA toolchains  
+- Translated docs (EN, 中文, ET, RU, FI, JA)  
+- Photonic bridge hardware prototypes  
+- Patron preset tuning from community benchmarks  
+
+---
 
 ## Other ways to help
 
-- Star the repo on GitHub
-- File issues with reproducible benchmarks
-- Contribute pull requests (kernels, docs, tests)
+- Star [github.com/utahisnotastate/utahvidia](https://github.com/utahisnotastate/utahvidia)  
+- Share the [gamer tutorial](gaming-tutorial.md) with your community  
+- Pull requests welcome (kernels, docs, presets)  
 
 [Back to documentation index](index.md)

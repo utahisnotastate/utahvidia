@@ -13,6 +13,8 @@ from utahvidia.reality_engine import UtahRealityEngine
 from utahvidia.latency_shield import LatencyShieldIntercept, reconstruct_frames
 from utahvidia.zeo_shield import NeuralStatePrefetcher, ZeoShieldEngine, zeo_prefetched_matmul
 
+from utahvidia.patron import apply_gaming_profile, is_patron_unlocked, patron_status
+
 __all__ = [
     "GhostKernelLayer",
     "UtahVidIaEngine",
@@ -27,5 +29,8 @@ __all__ = [
     "UtahRealityEngine",
     "LatencyShieldIntercept",
     "reconstruct_frames",
+    "apply_gaming_profile",
+    "is_patron_unlocked",
+    "patron_status",
 ]
-__version__ = "0.3.0"
+__version__ = "0.3.1"

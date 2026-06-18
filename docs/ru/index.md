@@ -12,7 +12,11 @@
 | [Для CTO](cto.md) | Стратегия, бюджет, риски, решения по вендорам |
 | [Для CUDA-программистов](cuda-programmers.md) | Разработчики, мигрирующие с CUDA/nvcc |
 | [Руководство по миграции](migration-guide.md) | Пошаговое внедрение из существующих стеков |
-| [Пожертвовать](donate.md) | Поддержать разработку |
+| [Игры и будущее GPU](gaming-index.md) | Учебники, latency shield, **GPU Unlock Patron** |
+| [Учебник для геймеров](gaming-tutorial.md) | Полное руководство для игроков и стримеров |
+| [GPU Unlock Patron](gpu-unlock-patron.md) | Пожертвование → Pro-профили навсегда |
+| [Игровой FAQ](gaming-faq.md) | Patron, безопасность, совместимость |
+| [Пожертвовать](donate.md) | PayPal utah@utahcreates.com |
 
 ## Быстрые ссылки
 

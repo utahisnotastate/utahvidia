@@ -12,7 +12,11 @@
 | [CTO 指南](cto.md) | 战略、预算、风险、厂商决策 |
 | [CUDA 程序员指南](cuda-programmers.md) | 从 CUDA/nvcc 迁移的开发者 |
 | [迁移指南](migration-guide.md) | 从现有技术栈逐步采用 |
-| [捐赠](donate.md) | 支持持续开发 |
+| [游戏与 GPU 未来](gaming-index.md) | 教程、延迟护盾、**GPU 解锁赞助者** |
+| [玩家教程](gaming-tutorial.md) | 玩家与主播完整 walkthrough |
+| [GPU 解锁赞助者](gpu-unlock-patron.md) | 捐赠 → 永久 Pro 配置文件 |
+| [游戏 FAQ](gaming-faq.md) | 赞助者、安全、兼容性 |
+| [捐赠](donate.md) | PayPal utah@utahcreates.com |
 
 ## 快速链接
 
@@ -23,3 +27,7 @@
 ## 其他语言
 
 [English](../en/) · [Eesti](../et/) · [Русский](../ru/) · [Suomi](../fi/) · [日本語](../ja/)
+
+## 支持
+
+[通过 PayPal 捐赠 — utah@utahcreates.com](https://www.paypal.com/donate/?business=utah%40utahcreates.com)
